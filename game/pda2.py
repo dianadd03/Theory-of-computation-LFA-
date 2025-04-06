@@ -123,7 +123,7 @@ def solve():
         else:
             room="EXIT"
         if(room=="KITCHEN" and stack[-1]!='!'):
-            print(f'Your current state: {room}. You should pick the spoon in order to win!(action=pick). Enter action:')
+            print(f'Your current state: {room}. You should pick the spoon 🥄 in order to win!(action=pick). Enter action:')
         else:
             print(f'Your current state: {room}. Enter action:')
         action=input()
@@ -138,6 +138,9 @@ def solve():
             action='3'
         elif action=='pick':
             action='4'
+        else:
+            print("Invalid action")
+            continue
 
         noacc = 0
         poz = Binary_Search(action, current_state)
