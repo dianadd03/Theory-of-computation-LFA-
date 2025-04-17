@@ -1,0 +1,15 @@
+STATES
+q0,S
+# Se dau starile despartite prin spatiu, acestea fiind urmate de S, F(despartite prin virgula)
+#in cazul in care starea curenta este q0 sau face parte din starile finale
+#-------------------------
+ALPHABET
+_ $
+# Se da alfabetul, despartit prin spatiu
+#-------------------------
+FUNCTION
+q0 _ > q0 $ R
+# Se dau regulile sub forma "stare_inceput val_read > stare_finala val_write move(L/R)"
+#-------------------------
+TAPE
+______

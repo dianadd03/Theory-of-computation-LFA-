@@ -1,33 +1,17 @@
 STATES
-q0,S q1 q2 q3 q4 q5,F
+q0,S q1 q2 q3,F
 # Se dau starile despartite prin spatiu, acestea fiind urmate de S, F(despartite prin virgula)
 #in cazul in care starea curenta este q0 sau face parte din starile finale
 #-------------------------
 ALPHABET
-0 1 2 3 4
+0 1
 # Se da alfabetul, despartit prin spatiu
 #-------------------------
 FUNCTION
-q0 0,ε,ε q1
-q0 1,ε,ε q0
-q0 2,ε,ε q0
-q0 3,ε,ε q0
-q1 0,ε,ε q3
-q1 1,ε,ε q0
-q1 2,ε,ε q2
-q1 3,ε,ε q4
-q2 0,ε,ε q2
-q2 1,ε,ε q2
-q2 2,ε,ε q2
-q2 3,ε,ε q1
-q2 4,ε,! q2
-q3 0,ε,ε q3
-q3 2,ε,ε q3
-q3 3,ε,ε q3
-q3 1,ε,ε q1
-q4 0,ε,ε q4
-q4 1,!,ε q5
-q4 2,ε,ε q1
-q4 3,ε,ε q4
+q0 ε,ε,$ q1
+q1 0,ε,0 q1
+q1 1,0,ε q2
+q2 1,0,ε q2
+q2 ε,$,ε q3
 # Se dau regulile sub forma "stare_inceput valoare_input,valoare_TopStiva,valoare_PushStiva  stare_finala"
 #-------------------------
