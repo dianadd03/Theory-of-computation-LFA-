@@ -93,7 +93,7 @@ def solve(input):
     return any(state in F for state in current_states)
 
 
-load_input_file('joc.txt')
+load_input_file('NFA_last3rdpos1.txt')
 # print(states)
 # print(alpha)
 # print(rules)

@@ -17,3 +17,29 @@ q2 1 > q3 _ R
 #-------------------------
 TAPE
 11+11_
+
+
+
+#chat gpt o3
+STATES
+q0,S qBackGap qGap qScan qShift0 qShift1 qAccept,F
+#-------------------------
+ALPHABET
+0 1 + _
+#-------------------------
+FUNCTION
+q0 0 > q0 0 R
+q0 1 > q0 1 R
+q0 + > qBackGap _ R
+qBackGap 0 > qGap 0 L
+qBackGap 1 > qGap 1 L
+qBackGap _ > qGap _ L
+qGap _ > qScan _ R
+qScan 0 > qShift0 _ L
+qScan 1 > qShift1 _ L
+qScan _ > qAccept _ R
+qShift0 _ > qGap 0 R
+qShift1 _ > qGap 1 R
+#-------------------------
+TAPE
+11+11_

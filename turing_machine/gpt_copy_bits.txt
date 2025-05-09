@@ -1,0 +1,51 @@
+STATES
+q0,S qSeekAt0 qSeekV0 qFindBlank0 qReturn0 qSeekAt1 qSeekV1 qFindBlank1 qReturn1 qAccept,F
+#-------------------------
+ALPHABET
+0 1 @ v _ X Y
+#-------------------------
+FUNCTION
+q0 0 > qSeekAt0 X R
+q0 1 > qSeekAt1 Y R
+q0 @ > qAccept @ R
+qSeekAt0 0 > qSeekAt0 0 R
+qSeekAt0 1 > qSeekAt0 1 R
+qSeekAt0 X > qSeekAt0 X R
+qSeekAt0 Y > qSeekAt0 Y R
+qSeekAt0 _ > qSeekAt0 _ R
+qSeekAt0 @ > qSeekV0 @ R
+qSeekV0 _ > qSeekV0 _ R
+qSeekV0 v > qFindBlank0 v R
+qFindBlank0 0 > qFindBlank0 0 R
+qFindBlank0 1 > qFindBlank0 1 R
+qFindBlank0 X > qFindBlank0 X R
+qFindBlank0 Y > qFindBlank0 Y R
+qFindBlank0 _ > qReturn0 0 L
+qReturn0 0 > qReturn0 0 L
+qReturn0 1 > qReturn0 1 L
+qReturn0 _ > qReturn0 _ L
+qReturn0 v > qReturn0 v L
+qReturn0 @ > qReturn0 @ L
+qReturn0 X > q0 0 R
+qSeekAt1 0 > qSeekAt1 0 R
+qSeekAt1 1 > qSeekAt1 1 R
+qSeekAt1 X > qSeekAt1 X R
+qSeekAt1 Y > qSeekAt1 Y R
+qSeekAt1 _ > qSeekAt1 _ R
+qSeekAt1 @ > qSeekV1 @ R
+qSeekV1 _ > qSeekV1 _ R
+qSeekV1 v > qFindBlank1 v R
+qFindBlank1 0 > qFindBlank1 0 R
+qFindBlank1 1 > qFindBlank1 1 R
+qFindBlank1 X > qFindBlank1 X R
+qFindBlank1 Y > qFindBlank1 Y R
+qFindBlank1 _ > qReturn1 1 L
+qReturn1 0 > qReturn1 0 L
+qReturn1 1 > qReturn1 1 L
+qReturn1 _ > qReturn1 _ L
+qReturn1 v > qReturn1 v L
+qReturn1 @ > qReturn1 @ L
+qReturn1 Y > q0 1 R
+#-------------------------
+TAPE
+10010@___v_____v

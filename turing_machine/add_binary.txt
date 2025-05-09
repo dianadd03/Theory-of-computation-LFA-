@@ -1,0 +1,41 @@
+###ALMOST
+STATES
+q0,S qScan0 qScan1 qSeekEnd qDecBorrow qMoveLeft qCarry qIncDone qFinalize qAccept,F
+#-------------------------
+ALPHABET
+0 1 + _
+#-------------------------
+FUNCTION
+q0 0 > q0 0 R
+q0 1 > q0 1 R
+q0 + > qScan0 + R
+qScan0 0 > qScan0 0 R
+qScan0 1 > qScan1 1 R
+qScan0 _ > qFinalize _ L
+qScan1 0 > qScan1 0 R
+qScan1 1 > qScan1 1 R
+qScan1 _ > qSeekEnd _ L
+qSeekEnd 1 > qMoveLeft 0 L
+qSeekEnd 0 > qDecBorrow 1 L
+qSeekEnd + > qFinalize + L
+qDecBorrow 0 > qDecBorrow 1 L
+qDecBorrow 1 > qMoveLeft 0 L
+qDecBorrow + > qMoveLeft + L
+qMoveLeft 0 > qMoveLeft 0 L
+qMoveLeft 1 > qMoveLeft 1 L
+qMoveLeft _ > qMoveLeft _ L
+qMoveLeft + > qCarry + L
+qCarry 0 > qIncDone 1 R
+qCarry 1 > qCarry 0 L
+qCarry _ > qIncDone 1 R
+qIncDone 0 > qIncDone 0 R
+qIncDone 1 > qIncDone 1 R
+qIncDone _ > qIncDone _ R
+qIncDone + > qScan0 + R
+qFinalize 0 > qFinalize _ L
+qFinalize 1 > qFinalize _ L
+qFinalize _ > qFinalize _ L
+qFinalize + > qAccept _ R
+#-------------------------
+TAPE
+11+11_

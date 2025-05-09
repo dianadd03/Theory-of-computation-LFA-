@@ -74,7 +74,7 @@ def Binary_Search(x, q):
 
 def solve(tape):
     tape=[x for x in tape]
-    print(tape)
+    print(*tape)
     current_state=q0
     i=0
     while i<len(tape):
@@ -89,16 +89,19 @@ def solve(tape):
             if(old[2]=='L'):
                 i-=1
             else:
+
                 i+=1
             current_state=next_state
 
     return tape
 
 
-load_input_file('config_add3+5.txt')
+load_input_file('gpt_copy_bits.txt')
+# load_input_file('config_tape$.txt')
+# load_input_file('config_concat.txt')
 # print(states)
 # print(alpha)
 # print(rules)
 # print(q0)
 # print(F)
-print(solve(tape))
+print(*solve(tape))
