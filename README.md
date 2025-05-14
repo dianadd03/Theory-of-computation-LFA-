@@ -5,13 +5,15 @@ It includes practical simulators and examples related to deterministic and nonde
 
 ## 📁 Project Structure
 
-Theory-of-computation-LFA-/
-├── DFA/ # Deterministic Finite Automata emulator
-├── NFA/ # Nondeterministic Finite Automata emulator
-├── PDA/ # Pushdown Automata emulator
-├── turing_machine/ # Turing Machine simulation scripts
-├── game/ # Game based on automata theory
-└── separating_words_problem_DorneanuDD.pdf # PDF addressing the separating words problem
+This repository is organized into the following components:
+
+- [`DFA/`](https://github.com/dianadd03/Theory-of-computation-LFA-/tree/main/DFA) – Deterministic Finite Automata emulator
+- [`NFA/`](https://github.com/dianadd03/Theory-of-computation-LFA-/tree/main/NFA) – Nondeterministic Finite Automata emulator
+- [`PDA/`](https://github.com/dianadd03/Theory-of-computation-LFA-/tree/main/PDA) – Pushdown Automata emulator
+- [`turing_machine/`](https://github.com/dianadd03/Theory-of-computation-LFA-/tree/main/turing_machine) – Turing Machine simulation scripts
+- [`game/`](https://github.com/dianadd03/Theory-of-computation-LFA-/tree/main/game) – PDA-based terminal game with ASCII map
+- [`separating_words_problem_DorneanuDD.pdf`](https://github.com/dianadd03/Theory-of-computation-LFA-/blob/main/separating_words_problem_DorneanuDD.pdf) – PDF addressing the Separating Words Problem
+
 ## 🎮 PDA-Based Game (`game/`)
 
 This folder contains a **console-based interactive game** that uses **Pushdown Automaton (PDA)** logic to determine winning conditions.
