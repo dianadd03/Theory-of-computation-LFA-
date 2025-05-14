@@ -1,14 +1,17 @@
-This repository contains Python implementations of key concepts from the Theory of Computation, particularly Formal Languages and Automata (LFA). It includes practical simulators and examples related to deterministic and nondeterministic machines.
+# Theory of Computation – LFA
 
-📁 Project Structure
+This repository contains Python implementations of key concepts from the Theory of Computation, particularly **Formal Languages and Automata (LFA)**.  
+It includes practical simulators and examples related to deterministic and nondeterministic machines.
+
+## 📁 Project Structure
+
 Theory-of-computation-LFA-/
-├── DFA/                    # Deterministic Finite Automata emulator
-├── NFA/                    # Nondeterministic Finite Automata emulator 
-├── PDA/                    # Pushdown Automata emulator
-├── turing_machine/         # Turing Machine simulation scripts
-├── game/                   # Game based on automata theory
-└── separating_words_problem_DorneanuDD.pdf  # PDF addressing the separating words problem
-
+├── DFA/ # Deterministic Finite Automata emulator
+├── NFA/ # Nondeterministic Finite Automata emulator
+├── PDA/ # Pushdown Automata emulator
+├── turing_machine/ # Turing Machine simulation scripts
+├── game/ # Game based on automata theory
+└── separating_words_problem_DorneanuDD.pdf # PDF addressing the separating words problem
 ## 🎮 PDA-Based Game (`game/`)
 
 This folder contains a **console-based interactive game** that uses **Pushdown Automaton (PDA)** logic to determine winning conditions.
