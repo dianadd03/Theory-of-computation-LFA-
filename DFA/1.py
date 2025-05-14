@@ -1,3 +1,4 @@
+#citirea unor matrici din fisiere, ignorand comentariile
 def is_matrix(m):
     n=len(m[0])
     for line in m:

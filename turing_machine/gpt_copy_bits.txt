@@ -1,3 +1,5 @@
+#Script generat cu Chat GPT o3 pentru copierea bitilor dinainte de '@'
+#intre cele doua caractere 'v'
 STATES
 q0,S qSeekAt0 qSeekV0 qFindBlank0 qReturn0 qSeekAt1 qSeekV1 qFindBlank1 qReturn1 qAccept,F
 #-------------------------

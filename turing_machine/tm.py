@@ -78,7 +78,7 @@ def solve(tape):
     current_state=q0
     i=0
     while i<len(tape):
-        # print(current_state, i)
+        print(current_state, i)
         if current_state in rules and tape[i] in rules[current_state]:
             # print(rules[current_state][tape[i]])
             old=rules[current_state][tape[i]]
@@ -99,6 +99,7 @@ def solve(tape):
 load_input_file('gpt_copy_bits.txt')
 # load_input_file('config_tape$.txt')
 # load_input_file('config_concat.txt')
+# load_input_file('add_binary.txt')
 # print(states)
 # print(alpha)
 # print(rules)

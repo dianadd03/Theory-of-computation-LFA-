@@ -1,3 +1,4 @@
+
 from msvcrt import getch
 
 states=[]

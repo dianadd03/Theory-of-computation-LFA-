@@ -1,3 +1,4 @@
+#DFA ce accepta doar stringuri care au suma cifrelor divizibila cu 3, <reset> ignora datele introduse anterior lui
 STATES
 q0,S,F q1 q2
 # Se dau starile despartite prin spatiu, acestea fiind urmate de S, F(despartite prin virgula)

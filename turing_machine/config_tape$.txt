@@ -1,3 +1,4 @@
+#Popularea bandei cu '$'
 STATES
 q0,S
 # Se dau starile despartite prin spatiu, acestea fiind urmate de S, F(despartite prin virgula)

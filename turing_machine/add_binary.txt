@@ -1,4 +1,4 @@
-###ALMOST
+#Script aproape functional doar pentru acest caz pentru a aduna 2 nr in binar
 STATES
 q0,S qScan0 qScan1 qSeekEnd qDecBorrow qMoveLeft qCarry qIncDone qFinalize qAccept,F
 #-------------------------

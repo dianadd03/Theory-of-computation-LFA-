@@ -1,3 +1,4 @@
+#prima forma a jocului din folderul "game"
 STATES
 q0,S q1 q2 q3 q4 q5,F
 # Se dau starile despartite prin spatiu, acestea fiind urmate de S, F(despartite prin virgula)

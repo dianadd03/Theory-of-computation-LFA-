@@ -1,3 +1,4 @@
+#Concatenarea a doua siruri
 STATES
 q0,S q1 q2 q3,F
 # Se dau starile despartite prin spatiu, acestea fiind urmate de S, F(despartite prin virgula)
@@ -42,4 +43,4 @@ qShift0 _ > qGap 0 R
 qShift1 _ > qGap 1 R
 #-------------------------
 TAPE
-11+11_
+11+110_

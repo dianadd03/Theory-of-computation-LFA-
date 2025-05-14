@@ -5,39 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aebe9c98-5ad7-4c61-9115-9d2fa03c4ec2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../NFA/nfa.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab1/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../turing_machine/add_binary.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../turing_machine/gpt2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../turing_machine/gpt_copy_bits.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../game/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../game/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab1/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab1/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab1/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab1/.idea/lab1.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab1/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab1/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab1/1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab1/DFA_mod3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab1/FA.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab1/NFA_101.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab1/NFA_last3rdpos0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab1/automat.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab1/automat_v2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab1/date.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab1/date2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab1/joc.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab1/nfa.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab1/nfa_infLoop.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/.idea/lab3.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/config.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3/pda.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../turing_machine/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../turing_machine/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../turing_machine/config_add3+5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../turing_machine/config_concat.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1.py" beforeDir="false" afterPath="$PROJECT_DIR$/1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DFA_mod3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DFA_mod3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/joc.txt" beforeDir="false" afterPath="$PROJECT_DIR$/joc.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/DFA.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../turing_machine/add_binary.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../turing_machine/add_binary.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../turing_machine/config_concat.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../turing_machine/config_concat.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../turing_machine/config_tape$.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../turing_machine/config_tape$.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../turing_machine/gpt_copy_bits.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../turing_machine/gpt_copy_bits.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../turing_machine/tm.py" beforeDir="false" afterPath="$PROJECT_DIR$/../turing_machine/tm.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,28 +38,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.automat.executor&quot;: &quot;Run&quot;,
-    &quot;Python.automat_v2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.dfa.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.nfa.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/facultate/Anul_I/sem2/LFA/Theory-of-computation-LFA-/DFA&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.1.executor": "Run",
+    "Python.DFA.executor": "Run",
+    "Python.automat.executor": "Run",
+    "Python.automat_v2.executor": "Run",
+    "Python.dfa.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.nfa.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/facultate/Anul_I/sem2/LFA/Theory-of-computation-LFA-/DFA",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="DFA" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="lab1" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -98,7 +74,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="D:\facultate\Anul_I\sem2\LFA\Theory-of-computation-LFA-\DFA\DFA.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -139,6 +115,7 @@
       <workItem from="1746708143178" duration="325000" />
       <workItem from="1746708521912" duration="88000" />
       <workItem from="1746708649581" duration="43000" />
+      <workItem from="1747253795589" duration="287000" />
     </task>
     <servers />
   </component>
@@ -147,9 +124,11 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/lab1$1.coverage" NAME="1 Coverage Results" MODIFIED="1741265620342" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DFA$DFA.coverage" NAME="DFA Coverage Results" MODIFIED="1747253989172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DFA$automat.coverage" NAME="automat Coverage Results" MODIFIED="1747253923181" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/lab1$automat.coverage" NAME="automat Coverage Results" MODIFIED="1741292269752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/lab1$nfa.coverage" NAME="nfa Coverage Results" MODIFIED="1742476542417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/lab1$automat_v2.coverage" NAME="automat_v2 Coverage Results" MODIFIED="1742476731462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/DFA$main.coverage" NAME="main Coverage Results" MODIFIED="1746708683878" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DFA$main.coverage" NAME="main Coverage Results" MODIFIED="1747253899497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
