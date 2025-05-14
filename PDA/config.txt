@@ -1,3 +1,4 @@
+#Accepta stringuri de forma 0^n 1^n
 STATES
 q0,S q1 q2 q3,F
 # Se dau starile despartite prin spatiu, acestea fiind urmate de S, F(despartite prin virgula)
