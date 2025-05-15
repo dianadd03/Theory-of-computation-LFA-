@@ -34,4 +34,7 @@ This folder contains a **console-based interactive game** that uses **Pushdown A
 ### ▶️ How to Play
 Run the game with the following command in your terminal:
 ```bash
-py game/pda_keys.py
+py .\pda_keys.py
+```
+<p align="center"> <img src="images/1.png" alt="Game Screenshot 1" width="600"/> </p> <p align="center"> <img src="images/2.png" alt="Game Screenshot 2" width="600"/> </p> <p align="center"> <img src="images/3.png" alt="Game Screenshot 3" width="600"/> </p> ```
+
