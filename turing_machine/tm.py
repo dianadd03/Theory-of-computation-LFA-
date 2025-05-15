@@ -96,10 +96,11 @@ def solve(tape):
     return tape
 
 
-load_input_file('gpt_copy_bits.txt')
+# load_input_file('gpt_copy_bits.txt')
 # load_input_file('config_tape$.txt')
 # load_input_file('config_concat.txt')
 # load_input_file('add_binary.txt')
+load_input_file("add_nocarry.txt")
 # print(states)
 # print(alpha)
 # print(rules)

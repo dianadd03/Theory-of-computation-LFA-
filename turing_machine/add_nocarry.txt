@@ -1,13 +1,12 @@
-# Adunarea a două cifre zecimale (fără retenție/carry)
-#-----------------------------------------------------
+# Adunarea a doua cifre fara trecere peste ordin
+# --------------------------------------------------
 STATES
-q0,S qA0 qA1 qA2 qA3 qA4 qA5 qA6 qA7 qA8 qA9 qAdd0 qAdd1 qAdd2 qAdd3 qAdd4 qAdd5 qAdd6 qAdd7 qAdd8 qAdd9 qBlankSec0 qBlankSec1 qBlankSec2 qBlankSec3 qBlankSec4 qBlankSec5 qBlankSec6 qBlankSec7 qBlankSec8 qBlankSec9 qEraseFirst qAccept,F
-#-----------------------------------------------------
+q0,S qA0 qA1 qA2 qA3 qA4 qA5 qA6 qA7 qA8 qA9 qAdd0 qAdd1 qAdd2 qAdd3 qAdd4 qAdd5 qAdd6 qAdd7 qAdd8 qAdd9 qBlankSec0 qBlankSec1 qBlankSec2 qBlankSec3 qBlankSec4 qBlankSec5 qBlankSec6 qBlankSec7 qBlankSec8 qBlankSec9 qEraseFirst qHalt,F
+# --------------------------------------------------
 ALPHABET
 0 1 2 3 4 5 6 7 8 9 + _
-#-----------------------------------------------------
+# --------------------------------------------------
 FUNCTION
-# 1) citim prima cifră și trecem în qAx corespunzător
 q0 0 > qA0 0 R
 q0 1 > qA1 1 R
 q0 2 > qA2 2 R
@@ -18,7 +17,6 @@ q0 6 > qA6 6 R
 q0 7 > qA7 7 R
 q0 8 > qA8 8 R
 q0 9 > qA9 9 R
-# 2) sărim peste ‘+’ spre a doua cifră
 qA0 + > qAdd0 + R
 qA1 + > qAdd1 + R
 qA2 + > qAdd2 + R
@@ -29,10 +27,6 @@ qA6 + > qAdd6 + R
 qA7 + > qAdd7 + R
 qA8 + > qAdd8 + R
 qA9 + > qAdd9 + R
-# 3) combinațiile valide (sumă < 10):
-#    – ștergem cifra a doua (‘_’), ne întoarcem la ‘+’ în starea qBlankSecS,
-#      unde S = (prima_cifră + a_doua_cifră)
-# Prima cifră = 0
 qAdd0 0 > qBlankSec0 _ L
 qAdd0 1 > qBlankSec1 _ L
 qAdd0 2 > qBlankSec2 _ L
@@ -43,7 +37,6 @@ qAdd0 6 > qBlankSec6 _ L
 qAdd0 7 > qBlankSec7 _ L
 qAdd0 8 > qBlankSec8 _ L
 qAdd0 9 > qBlankSec9 _ L
-# Prima cifră = 1
 qAdd1 0 > qBlankSec1 _ L
 qAdd1 1 > qBlankSec2 _ L
 qAdd1 2 > qBlankSec3 _ L
@@ -53,7 +46,6 @@ qAdd1 5 > qBlankSec6 _ L
 qAdd1 6 > qBlankSec7 _ L
 qAdd1 7 > qBlankSec8 _ L
 qAdd1 8 > qBlankSec9 _ L
-# Prima cifră = 2
 qAdd2 0 > qBlankSec2 _ L
 qAdd2 1 > qBlankSec3 _ L
 qAdd2 2 > qBlankSec4 _ L
@@ -62,7 +54,6 @@ qAdd2 4 > qBlankSec6 _ L
 qAdd2 5 > qBlankSec7 _ L
 qAdd2 6 > qBlankSec8 _ L
 qAdd2 7 > qBlankSec9 _ L
-# Prima cifră = 3
 qAdd3 0 > qBlankSec3 _ L
 qAdd3 1 > qBlankSec4 _ L
 qAdd3 2 > qBlankSec5 _ L
@@ -70,34 +61,27 @@ qAdd3 3 > qBlankSec6 _ L
 qAdd3 4 > qBlankSec7 _ L
 qAdd3 5 > qBlankSec8 _ L
 qAdd3 6 > qBlankSec9 _ L
-# Prima cifră = 4
 qAdd4 0 > qBlankSec4 _ L
 qAdd4 1 > qBlankSec5 _ L
 qAdd4 2 > qBlankSec6 _ L
 qAdd4 3 > qBlankSec7 _ L
 qAdd4 4 > qBlankSec8 _ L
 qAdd4 5 > qBlankSec9 _ L
-# Prima cifră = 5
 qAdd5 0 > qBlankSec5 _ L
 qAdd5 1 > qBlankSec6 _ L
 qAdd5 2 > qBlankSec7 _ L
 qAdd5 3 > qBlankSec8 _ L
 qAdd5 4 > qBlankSec9 _ L
-# Prima cifră = 6
 qAdd6 0 > qBlankSec6 _ L
 qAdd6 1 > qBlankSec7 _ L
 qAdd6 2 > qBlankSec8 _ L
 qAdd6 3 > qBlankSec9 _ L
-# Prima cifră = 7
 qAdd7 0 > qBlankSec7 _ L
 qAdd7 1 > qBlankSec8 _ L
 qAdd7 2 > qBlankSec9 _ L
-# Prima cifră = 8
 qAdd8 0 > qBlankSec8 _ L
 qAdd8 1 > qBlankSec9 _ L
-# Prima cifră = 9
 qAdd9 0 > qBlankSec9 _ L
-# 4) scriem rezultatul peste ‘+’ și mergem să ștergem prima cifră
 qBlankSec0 + > qEraseFirst 0 L
 qBlankSec1 + > qEraseFirst 1 L
 qBlankSec2 + > qEraseFirst 2 L
@@ -108,17 +92,16 @@ qBlankSec6 + > qEraseFirst 6 L
 qBlankSec7 + > qEraseFirst 7 L
 qBlankSec8 + > qEraseFirst 8 L
 qBlankSec9 + > qEraseFirst 9 L
-# 5) ștergem prima cifră și acceptăm
-qEraseFirst 0 > qAccept _ R
-qEraseFirst 1 > qAccept _ R
-qEraseFirst 2 > qAccept _ R
-qEraseFirst 3 > qAccept _ R
-qEraseFirst 4 > qAccept _ R
-qEraseFirst 5 > qAccept _ R
-qEraseFirst 6 > qAccept _ R
-qEraseFirst 7 > qAccept _ R
-qEraseFirst 8 > qAccept _ R
-qEraseFirst 9 > qAccept _ R
-#-----------------------------------------------------
+qEraseFirst 0 > qHalt _ R
+qEraseFirst 1 > qHalt _ R
+qEraseFirst 2 > qHalt _ R
+qEraseFirst 3 > qHalt _ R
+qEraseFirst 4 > qHalt _ R
+qEraseFirst 5 > qHalt _ R
+qEraseFirst 6 > qHalt _ R
+qEraseFirst 7 > qHalt _ R
+qEraseFirst 8 > qHalt _ R
+qEraseFirst 9 > qHalt _ R
+# --------------------------------------------------
 TAPE
-3+6_
+3+3_
