@@ -1,41 +1,105 @@
-#Script aproape functional doar pentru acest caz pentru a aduna 2 nr in binar
+# Adunare binară pe bandă unică
+# --------------------------------------------------
 STATES
-q0,S qScan0 qScan1 qSeekEnd qDecBorrow qMoveLeft qCarry qIncDone qFinalize qAccept,F
-#-------------------------
+q0,S qAdd0 qAdd1 qC0D0 qC0D1 qC1D0 qC1D1 qFetch0D0 qFetch0D1 qFetch1D0 qFetch1D1 qR00 qR01 qR10 qR11 qWriteCarry qCleanupLeft qCleanupRight qHalt,F
+# --------------------------------------------------
 ALPHABET
-0 1 + _
-#-------------------------
+0 1 + _ X A
+# --------------------------------------------------
 FUNCTION
 q0 0 > q0 0 R
 q0 1 > q0 1 R
-q0 + > qScan0 + R
-qScan0 0 > qScan0 0 R
-qScan0 1 > qScan1 1 R
-qScan0 _ > qFinalize _ L
-qScan1 0 > qScan1 0 R
-qScan1 1 > qScan1 1 R
-qScan1 _ > qSeekEnd _ L
-qSeekEnd 1 > qMoveLeft 0 L
-qSeekEnd 0 > qDecBorrow 1 L
-qSeekEnd + > qFinalize + L
-qDecBorrow 0 > qDecBorrow 1 L
-qDecBorrow 1 > qMoveLeft 0 L
-qDecBorrow + > qMoveLeft + L
-qMoveLeft 0 > qMoveLeft 0 L
-qMoveLeft 1 > qMoveLeft 1 L
-qMoveLeft _ > qMoveLeft _ L
-qMoveLeft + > qCarry + L
-qCarry 0 > qIncDone 1 R
-qCarry 1 > qCarry 0 L
-qCarry _ > qIncDone 1 R
-qIncDone 0 > qIncDone 0 R
-qIncDone 1 > qIncDone 1 R
-qIncDone _ > qIncDone _ R
-qIncDone + > qScan0 + R
-qFinalize 0 > qFinalize _ L
-qFinalize 1 > qFinalize _ L
-qFinalize _ > qFinalize _ L
-qFinalize + > qAccept _ R
-#-------------------------
+q0 + > q0 + R
+q0 _ > qAdd0 _ L
+qAdd0 0 > qC0D0 X L
+qAdd0 1 > qC0D1 X L
+qAdd0 + > qC0D0 X L
+qAdd0 X > qAdd0 X L
+qAdd0 A > qAdd0 A L
+qAdd0 _ > qCleanupLeft _ L
+qAdd1 0 > qC1D0 X L
+qAdd1 1 > qC1D1 X L
+qAdd1 + > qC1D0 X L
+qAdd1 X > qAdd1 X L
+qAdd1 A > qAdd1 A L
+qAdd1 _ > qWriteCarry 1 R
+qC0D0 0 > qC0D0 0 L
+qC0D0 1 > qC0D0 1 L
+qC0D0 X > qC0D0 X L
+qC0D0 A > qC0D0 A L
+qC0D0 + > qFetch0D0 + L
+qC0D0 _ > qR00 _ R
+qC0D1 0 > qC0D1 0 L
+qC0D1 1 > qC0D1 1 L
+qC0D1 X > qC0D1 X L
+qC0D1 A > qC0D1 A L
+qC0D1 + > qFetch0D1 + L
+qC0D1 _ > qR01 _ R
+qC1D0 0 > qC1D0 0 L
+qC1D0 1 > qC1D0 1 L
+qC1D0 X > qC1D0 X L
+qC1D0 A > qC1D0 A L
+qC1D0 + > qFetch1D0 + L
+qC1D0 _ > qR01 _ R
+qC1D1 0 > qC1D1 0 L
+qC1D1 1 > qC1D1 1 L
+qC1D1 X > qC1D1 X L
+qC1D1 A > qC1D1 A L
+qC1D1 + > qFetch1D1 + L
+qC1D1 _ > qR10 _ R
+qFetch0D0 A > qFetch0D0 A L
+qFetch0D0 0 > qR00 A R
+qFetch0D0 1 > qR01 A R
+qFetch0D0 _ > qR00 _ R
+qFetch0D1 A > qFetch0D1 A L
+qFetch0D1 0 > qR01 A R
+qFetch0D1 1 > qR10 A R
+qFetch0D1 _ > qR01 _ R
+qFetch1D0 A > qFetch1D0 A L
+qFetch1D0 0 > qR01 A R
+qFetch1D0 1 > qR10 A R
+qFetch1D0 _ > qR01 _ R
+qFetch1D1 A > qFetch1D1 A L
+qFetch1D1 0 > qR10 A R
+qFetch1D1 1 > qR11 A R
+qFetch1D1 _ > qR10 _ R
+qR00 0 > qR00 0 R
+qR00 1 > qR00 1 R
+qR00 + > qR00 + R
+qR00 _ > qR00 _ R
+qR00 A > qR00 A R
+qR00 X > qAdd0 0 L
+qR01 0 > qR01 0 R
+qR01 1 > qR01 1 R
+qR01 + > qR01 + R
+qR01 _ > qR01 _ R
+qR01 A > qR01 A R
+qR01 X > qAdd0 1 L
+qR10 0 > qR10 0 R
+qR10 1 > qR10 1 R
+qR10 + > qR10 + R
+qR10 _ > qR10 _ R
+qR10 A > qR10 A R
+qR10 X > qAdd1 0 L
+qR11 0 > qR11 0 R
+qR11 1 > qR11 1 R
+qR11 + > qR11 + R
+qR11 _ > qR11 _ R
+qR11 A > qR11 A R
+qR11 X > qAdd1 1 L
+qWriteCarry _ > qCleanupLeft _ L
+qWriteCarry X > qCleanupLeft X L
+qWriteCarry A > qCleanupLeft A L
+qWriteCarry 0 > qCleanupLeft 0 L
+qWriteCarry 1 > qCleanupLeft 1 L
+qCleanupLeft A > qCleanupLeft _ L
+qCleanupLeft X > qCleanupLeft _ L
+qCleanupLeft 0 > qCleanupRight 0 R
+qCleanupLeft 1 > qCleanupRight 1 R
+qCleanupLeft _ > qCleanupRight _ R
+qCleanupRight 0 > qCleanupRight 0 R
+qCleanupRight 1 > qCleanupRight 1 R
+qCleanupRight _ > qHalt _ R
+# --------------------------------------------------
 TAPE
-11+11_
+1+11_
