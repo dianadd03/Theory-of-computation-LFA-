@@ -1,11 +1,11 @@
-# Adunare binară pe bandă unică
-# --------------------------------------------------
+# Binary adder (one-tape)
+#-------------------------
 STATES
 q0,S qAdd0 qAdd1 qC0D0 qC0D1 qC1D0 qC1D1 qFetch0D0 qFetch0D1 qFetch1D0 qFetch1D1 qR00 qR01 qR10 qR11 qWriteCarry qCleanupLeft qCleanupRight qHalt,F
-# --------------------------------------------------
+#-------------------------
 ALPHABET
 0 1 + _ X A
-# --------------------------------------------------
+#-------------------------
 FUNCTION
 q0 0 > q0 0 R
 q0 1 > q0 1 R
@@ -28,25 +28,25 @@ qC0D0 1 > qC0D0 1 L
 qC0D0 X > qC0D0 X L
 qC0D0 A > qC0D0 A L
 qC0D0 + > qFetch0D0 + L
-qC0D0 _ > qR00 _ R
+qC0D0 _ > qFetch0D0 _ R
 qC0D1 0 > qC0D1 0 L
 qC0D1 1 > qC0D1 1 L
 qC0D1 X > qC0D1 X L
 qC0D1 A > qC0D1 A L
 qC0D1 + > qFetch0D1 + L
-qC0D1 _ > qR01 _ R
+qC0D1 _ > qFetch0D1 _ R
 qC1D0 0 > qC1D0 0 L
 qC1D0 1 > qC1D0 1 L
 qC1D0 X > qC1D0 X L
 qC1D0 A > qC1D0 A L
 qC1D0 + > qFetch1D0 + L
-qC1D0 _ > qR01 _ R
+qC1D0 _ > qFetch1D0 _ R
 qC1D1 0 > qC1D1 0 L
 qC1D1 1 > qC1D1 1 L
 qC1D1 X > qC1D1 X L
 qC1D1 A > qC1D1 A L
 qC1D1 + > qFetch1D1 + L
-qC1D1 _ > qR10 _ R
+qC1D1 _ > qFetch1D1 _ R
 qFetch0D0 A > qFetch0D0 A L
 qFetch0D0 0 > qR00 A R
 qFetch0D0 1 > qR01 A R
@@ -97,9 +97,11 @@ qCleanupLeft X > qCleanupLeft _ L
 qCleanupLeft 0 > qCleanupRight 0 R
 qCleanupLeft 1 > qCleanupRight 1 R
 qCleanupLeft _ > qCleanupRight _ R
+qCleanupRight A > qCleanupRight _ R
+qCleanupRight X > qCleanupRight _ R
 qCleanupRight 0 > qCleanupRight 0 R
 qCleanupRight 1 > qCleanupRight 1 R
 qCleanupRight _ > qHalt _ R
-# --------------------------------------------------
+#-------------------------
 TAPE
-1+11_
+11+111_
