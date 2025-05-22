@@ -27,7 +27,7 @@ This folder contains a **console-based interactive game** that uses **Pushdown A
 - `pda_keys.py` – the playable version of the game using keyboard input.
 
 ### 🧩 Features
-- Playable using **keyboard controls** (e.g., WASD or arrow keys).
+- Playable using **keyboard controls** (WASD).
 - Stack-based PDA logic tracks your actions (e.g., item pickup).
 - Fully playable inside the terminal.
 
